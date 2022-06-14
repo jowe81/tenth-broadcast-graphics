@@ -4,11 +4,11 @@ import Textbox from './Textbox';
 import FileUpload from './FileUpload';
 import SubmitButton from './SubmitButton';
 
-const InputForm = () => {
+const InputForm = (props) => {
   return (
     <div className='input-form'>
       <Form>
-        <Textbox/>
+        <Textbox onTextChange={props.onTextChange}/>
         <FileUpload/>
         <SubmitButton/>
       </Form>

@@ -1,12 +1,25 @@
 import './App.scss';
 import InputForm from './components/InputForm';
-import Canvas from './components/Canvas';
+import LowerThird from './components/LowerThird';
+
+import { useEffect, useState } from 'react';
 
 function App() {
+
+  const [text, setText] = useState('');
+
+  const onTextChange = (e) => {
+    setText(e.target.value);
+  }
+
+  useEffect(() => {
+
+  }, []);
+
   return (
     <div className="App">
-      <InputForm/>
-      <Canvas width="1920" height="1080"/>
+      <InputForm onTextChange={onTextChange}/>
+      <LowerThird width="1920" height="1080" text={text}/>
     </div>
   );
 }

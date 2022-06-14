@@ -5,15 +5,16 @@ const Canvas = props => {
   
   const canvasRef = useRef(null)
   
+  const { drawBg, width, height, drawFg } = props;
+
   useEffect(() => {
     const canvas = canvasRef.current
     const context = canvas.getContext('2d')
-    //Our first draw
-    context.fillStyle = '#000000AA'
-    context.fillRect(0, 820, context.canvas.width, context.canvas.height)
-  }, [])
+    drawBg(context);
+    drawFg(context);
+  }, [drawBg]);
   
-  return <canvas ref={canvasRef} {...props}/>
+  return <canvas ref={canvasRef} width={width} height={height}/>
 }
 
 export default Canvas;
