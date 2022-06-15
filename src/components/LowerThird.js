@@ -10,8 +10,8 @@ const LowerThird = props => {
 
   const drawText = context => {
     context.fillStyle = '#FFFFFF';
-    context.font = "30px Arial";
-    context.fillText(props.text || '', 50, 950);    
+    context.font = "30px Locator";
+    context.fillText('³ '+ props.text || '', 50, 950);    
   };
   
   return (<Canvas {...props} drawBg={drawLowerThird} drawFg={drawText}/>);
