@@ -6,6 +6,11 @@ import AppContext from './context/AppContext';
 
 import { useEffect, useState, useRef } from 'react';
 
+function testFunction() {
+  return <div>This is the test change</div>
+}
+
+
 function App() {
 
   const [text, setText] = useState('');
